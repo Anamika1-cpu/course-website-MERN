@@ -16,7 +16,7 @@ import { RiDashboardFill, RiLogoutBoxLine, RiMenu5Fill } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 
 
-const isAuthentcated = true;
+const isAuthentcated = false;
 const user = {
   role:'admin'
 }
