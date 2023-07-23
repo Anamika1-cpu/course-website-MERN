@@ -11,8 +11,12 @@ import Register from './components/Auth/Register';
 import ForgetPassword from './components/Auth/ForgetPassword';
 import ResetPassword from './components/Auth/ResetPassword';
 import Request from './components/Request/Request';
+import Subscribe from './components/Payment/Subscribe/Subscribe';
+import NotFound from './components/Layout/NotFound/NotFound';
+import PaymentFail from './components/Payment/PaymentFail/PaymentFail';
+import PaymentSuccess from './components/Payment/PaymentSuccess/PaymentSuccess';
 
-const App = () => {
+const   App = () => {
   return (
     <Router>
       <Header />
@@ -26,6 +30,10 @@ const App = () => {
         <Route path="/request" element={<Request />} />
         <Route path="/forgetPassword" element={<ForgetPassword />} />
         <Route path="/resetPassword/:token" element={<ResetPassword />} />
+        <Route path="/subscribe" element={<Subscribe />} />
+        <Route path="*" element={<NotFound />} />
+        <Route path="/paymentSuccess" element={<PaymentSuccess />} />
+        <Route path="/paymentFail" element={<PaymentFail />} />
       </Routes>
       <Footer />
     </Router>
