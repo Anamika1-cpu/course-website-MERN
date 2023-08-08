@@ -20,12 +20,10 @@ const Subscribe = () => {
           <Text children={`Join pro pack and get access to all content.`} />
           <Heading size="md" children={'₹299 Only'} />
         </VStack>
-
         <Button
           my="8"
           w="full"
           colorScheme={'yellow'}
-          
         >
           Buy Now
         </Button>

@@ -16,7 +16,7 @@ import NotFound from './components/Layout/NotFound/NotFound';
 import PaymentFail from './components/Payment/PaymentFail/PaymentFail';
 import PaymentSuccess from './components/Payment/PaymentSuccess/PaymentSuccess';
 
-const   App = () => {
+const App = () => {
   return (
     <Router>
       <Header />
