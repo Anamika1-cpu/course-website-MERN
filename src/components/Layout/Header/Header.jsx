@@ -16,7 +16,7 @@ import { RiDashboardFill, RiLogoutBoxLine, RiMenu5Fill } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 
 
-const isAuthentcated = false;
+const isAuthentcated = true;
 const user = {
   role:'admin'
 }
@@ -39,7 +39,8 @@ const Header = () => {
       <Button
         onClick={onOpen}
         colorScheme="yellow"
-        width="12"
+        width="12"z
+        zIndex={"overlay"}
         height="12"
         rounded="full"
         position={'fixed'}
