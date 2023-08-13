@@ -1,8 +1,8 @@
 import { Box, Grid } from '@chakra-ui/react'
 import React from 'react'
-import cursor from '../../assets/images/cursor.png'
+import cursor from '../../../assets/images/cursor.png'
 import Sidebar from '../Sidebar'
-const Dashboard = () => {
+const Users = () => {
     return (
         <Grid css={{
             cursor: `url(${cursor}), default`
@@ -14,4 +14,4 @@ const Dashboard = () => {
     )
 }
 
-export default Dashboard
+export default Users
