@@ -1,4 +1,4 @@
-import { Box, Grid, HStack, Heading, Stack, Text } from '@chakra-ui/react'
+import { Box, Grid, HStack, Heading, Progress, Stack, Text } from '@chakra-ui/react'
 import React from 'react'
 import cursor from '../../../assets/images/cursor.png'
 import Sidebar from '../Sidebar'
@@ -22,8 +22,28 @@ const Dashboard = () => {
                     <Databox title={"Views"} qty={'3'} qtyPercetage={'23'} profit={true} />
                     <Databox title={"Views"} qty={'3'} qtyPercetage={'65'} profit={false} />
                     <Databox title={"Views"} qty={'3'} qtyPercetage={'23'} profit={true} />
-
                 </Stack>
+                <Box m={["0", "16"]}
+                    borderRadius={'lg'}
+                    p={["0", "16"]}
+                    mt={["4", "16"]}
+                    boxShadow={'-2px 0 10px rgba(107,70,193,0.5)'}
+                >
+                    <Heading children={"Views Graph"} textAlign={["center", "left"]} size={"md"} mt={["8", "0"]} ml={["0", "16"]} />
+                </Box>
+                <Grid templateAreas={["1fr", "2fr 1fr"]}>
+                    <Box p="4" >
+                        <Heading size={"md"} textAlign={["center", "left"]}
+                            my={'8'} ml={["0", "16"]} children={"Progress Bar"} />
+
+                        <Bar profit={true} title={"Views"} value={10} />
+                        <Bar profit={true} title={"Views"} value={10} />
+                        <Bar profit={false} title={"Views"} value={10} />
+                    </Box>
+                    <Box p={['0', '16']} boxSizing='borderBox' py={'4'} >
+                        <Heading textAlign={'center'} size={'md'} mb={'4'} children="Users" />
+                    </Box>
+                </Grid>
             </Box>
             <Sidebar />
         </Grid>
@@ -45,6 +65,20 @@ function Databox({ title, qty, qtyPercetage, profit }) {
                 </HStack>
             </HStack>
             <Text children={"Since last month"} opacity={0.6} />
+        </Box>
+    )
+}
+
+function Bar({ title, value, profit }) {
+    return (
+        <Box py={'4'} px={['0', '20']}>
+            <Heading size={'sm'} children={title} mb={2} />
+            <HStack w={'full'} align={'center'} >
+                <Text children={profit ? "0%" : `${value}%`} />
+
+                <Progress borderRadius={'lg'} w={'full'} value={profit ? value : 0} colorScheme='purple' />
+                <Text children={`${value > 100 ? value : 100}%`} />
+            </HStack>
         </Box>
     )
 }
