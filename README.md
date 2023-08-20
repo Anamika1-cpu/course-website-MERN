@@ -1,4 +1,4 @@
-<h1>Course Website(MERN)</h1>
+<h1> Course Website(MERN) </h1>
 <h1>Technologies Used</h1>
 <li>React</li>
 <li>Chakra UI</li>
